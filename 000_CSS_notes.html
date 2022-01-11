@@ -1,0 +1,1550 @@
+WRITE YOUR STYLES IN A .CSS FILE AND THEN INCLUDE IT USING A
+<!--<link>--> in the head of the html document.
+
+<!-- DON NOT USE THE <style></style> --> TAG IN THE HEAD TAG OR INSIDE THE INPUT TAG
+
+
+
+* COLOR
+
+<!-- The color CSS property sets the foreground color value of an element's text and text decorations, and sets 
+the <currentcolor> value. current color may be used as an indirect value on other properties and is the default for other color properties, such as border-color. -->
+
+
+* BACKGROUND COLOR
+
+The background-color CSS property sets the background color of an element.
+
+BACKGROUND-COLOR AND BACKGROUND ARE BOTH DIFFERENT ELEMENTS
+
+
+
+* RGB
+
+RED,GREEN,BLUE CHANNEL
+
+EACH CHANNEL RANGES FROM 0-255
+
+EXAMPLE
+
+h2{
+color: teal;
+background-color:rgb(89,151,0);
+}
+
+
+
+* HEXADECIMAL
+
+
+h2{
+color: #1AEAE0;
+background-color:rgb(89,151,0);
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*CSS TEXT PROPERTIES
+
+TEXT ALIGN
+
+The text-align CSS property sets the horizontal alignment of the content inside a block element or
+table-cell box. This means it works like vertical-align but in the horizontal direction.
+
+h1{
+text-align: center;
+}
+
+
+* FONT WEIGHT https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+
+The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family
+that is currently set.
+
+h1{
+text-align: center;
+font-weight: 400;
+}
+
+
+* TEXT DECORATION https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+
+The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for
+text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
+
+h1{
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+
+}
+
+
+To remove underline from hyperlinks
+
+a{
+text-decoration: none;
+}
+
+
+
+* LINE HEIGHT
+
+The line-height CSS property sets the height of a line box. It's commonly used to set the distance between
+lines of text. On block-level elements, it specifies the minimum height of line boxes within the element.
+On non-replaced inline elements, it specifies the height that is used to calculate line box height.
+
+p {
+line-height: 2;
+}
+
+
+* Letter Spacing
+
+The letter-spacing CSS property sets the horizontal spacing behavior between text characters.
+This value is added to the natural spacing between characters while rendering the text. Positive
+values of letter-spacing causes characters to spread farther apart, while negative values of
+letter-spacing bring characters closer together.
+
+
+h1{
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+letter-spacing: 15px;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* FONT SIZE https://developer.mozilla.org/en-US/docs/Web/CSS/FONT-SIZE
+
+The font-size CSS property sets the size of the font. Changing the font size also updates
+<!-- the sizes of the font size-relative <length> units, such as em, ex, and so forth. -->
+
+h1{
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+letter-spacing: 15px;
+font-size: 80px;
+}
+
+
+* FONT FAMILY https://developer.mozilla.org/en-US/docs/Web/CSS/FONT-family
+
+The font-family CSS property specifies a prioritized list of one or more font family names
+and/or generic family names for the selected element.
+
+Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the
+list that is
+installed or that can be downloaded using a @font-face at-rule.
+
+It is often convenient to use the shorthand property font to set font-size and other font related properties all at
+once.
+
+You should always include at least one generic family name in a font-family list, since there's no guarantee that any
+given font is
+available. This lets the browser select an acceptable fallback font when necessary.
+
+The font-family property specifies a list of fonts, from highest priority to lowest. Font selection does not stop at the
+first
+font in the list that is on the user's system. Rather, font selection is done one character at a time, so that if an
+available
+font does not have a glyph for a needed character, the latter fonts are tried. When a font is only available in some
+styles,
+variants, or sizes, those properties may also influence which font family is chosen.
+
+
+EXAMPLE
+
+h1{
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+letter-spacing: 15px;
+font-size: 80px;
+font-family: Arial;
+}
+
+IF FONT NOT AVAILABLE IN MACHINE CAN USE A BACK UP FONT LIKE THIS
+
+h1{
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+letter-spacing: 15px;
+font-size: 80px;
+font-family: Segoe UI,Arial,sans-serif;
+}
+
+
+Telling machine to pick any font of sans-serif FAMILY
+
+text-align: center;
+font-weight: 400;
+text-decoration: blue underline wavy;
+letter-spacing: 15px;
+font-size: 80px;
+font-family: Segoe UI,Arial,sans-serif;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* CSS SELECTORS
+
+CSS Rules: Everything you do in CSS follows basic pattern below
+
+selector{
+property:value
+}
+
+
+(1) Universal Selector---> 'Selects Everything'
+
+*{
+background-color: cyan;
+}
+
+(2) Element Selector ----> 'Selects eveything of a given type'
+
+button{
+font-size: 30px;
+}
+
+
+WE CAN USE COMMA TO COMBINE MULTIPLE SELECTORS IN A LIST
+
+h1,h2 {
+color: darkslateblue;
+}
+
+
+
+*ID SELECTOR
+
+DON'T SPAM ID'S
+
+WE CAN USE IDS ON ANY ELEMENT TO PROVIDE A HOOK FOR CSS TO SINGLE OUT A SINGLE ELEMENT
+TO STYLE ONE THING DIFFERENTLY
+
+ID IS UNIQUE AND ONLY ONE THING SHOULD BE GIVEN A SINGLE ID
+
+SYNTAX IS
+
+# NAME OF THE ID GIVEN TO THE ELEMENT IN HTML, IN THIS CASE THE BUTTON ELEMENT
+
+IN .html file
+<!-- <button id="signup">Sign Up</button> -->
+
+
+IN .css file
+#signup{
+background-color: #003049;
+}
+
+
+
+* CLASS SELECTOR
+
+Select elements with class of 'complete'
+
+CLASS CAN BE GIVEN TO ANY ELEMENT, IT'S LIKE A LABEL.
+
+Class is similar to id's
+
+Class can be applied to multiple elements
+
+SYNTAX
+
+.name of the class{
+color:green;
+}
+
+
+IN .html
+<!-- <h2>Lol look at this hilarious meme <span class="tag">funny</span></h2> -->
+
+IN .css
+
+.tag{
+background-color: #d00000;
+color: #f8edeb;
+font-size: 16px;
+}
+
+
+
+* DECENDANT SELECTOR
+
+SYNTAX
+
+Select all anchor tags nested inside list
+
+li a{
+color:teal;
+}
+
+
+IN .html FILE
+
+<!-- <section class="post">
+<span>Posted by <a href="#213adas">/u/not_funny</a></span> -->
+
+
+IN .css FILE
+
+.post a{
+color: #003049;
+}
+
+
+
+* ADJACENT SELECTOR
+
+
+SELECT ONLY PARAGRAPHS THAR ARE IMMEDIATELY PRECEDED BY H1
+
+h1+p {
+color:red;
+}
+
+
+IN .html file
+
+<!-- <input type="text" placeholder="search" id="search"> -->
+<!-- <button>Log In</button> -->
+
+
+<!-- <h2>Lol look at this hilarious meme <span class="tag">funny</span></h2> -->
+<!-- <button>+Vote</button> -->
+
+IN .css file
+
+input + button{
+background-color: teal;
+}
+
+
+h2+button{
+font-size:20px;
+}
+
+
+
+* DIRECT DISCENDANT SELECTOR
+
+<!-- SELECT ONLLY THE <li>'s' that are a direct decendant of <div> element -->
+
+div > li{
+color:white;
+}
+
+
+
+IN .css file
+
+footer > a{
+color:teal;
+}
+
+IN .html FILE
+
+<!-- <footer>
+    <a href="hhfhf">Content available under license</a>
+</footer> -->
+
+
+
+
+* ATTRIBUTE SELECTOR NOT USED THAT MUCH
+
+Select all input elements where the type attribute is set to text
+
+input[type="text"]{
+width:300px;
+color:yellow;
+}
+
+
+IN .css FILE
+
+input[type="password"]{
+color:yellow;
+}
+
+IN .html FILE
+
+<!-- <input type="password" placeholder="password"> -->
+
+
+
+* PSEUDO CLASSES
+
+keywords addes to a selector that specifies a special state of the
+selected element(s)
+
+:active
+:checked
+:first
+:first-child
+:hover
+:not()
+:nth-child()
+:nth-of-type()
+
+
+(1) :hover
+
+The :hover CSS pseudo-class matches when the user interacts with an element with a
+pointing device, but does not necessarily activate it. It is generally triggered when
+the user hovers over an element with the cursor (mouse pointer).
+
+Styles defined by the :hover pseudo-class will be overridden by any subsequent link-related
+pseudo-class (:link, :visited, or :active) that has at least equal specificity. To style links
+appropriately, put the :hover rule after the :link and :visited rules but before the :active one,
+as defined by the LVHA-order: :link — :visited — :hover — :active.
+
+
+IN .CSS file
+
+.post button:hover{
+background-color: red;
+color: white;
+}
+
+
+.post a{
+color: #003049;
+font-weight: 700;
+text-decoration: none; ---> no underline initially
+}
+
+.post a:hover {
+text-decoration: underline; ---> underline when you hover
+}
+
+
+
+(2) :active
+
+The :active CSS pseudo-class represents an element (such as a button) that is being activated
+by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+
+<!-- The :active pseudo-class is commonly used on <a> and <button> elements. Other common targets of this pseudo-class
+include elements that contain an activated element, and form elements that are being activated through their
+associated <label>. -->
+
+
+Styles defined by the :active pseudo-class will be overridden by any subsequent link-related pseudo-class
+(:link, :hover, or :visited) that has at least equal specificity. To style links appropriately, put the
+:active rule after all other link-related rules, as defined by the LVHA-order: :link — :visited — :hover —
+:active.
+
+
+IN .CSS file
+
+.post button:active{
+background-color: #6930c3;
+}
+
+
+
+(3) :checked
+
+<!-- The :checked CSS pseudo-class selector represents any radio 
+(<input type="radio">), checkbox (<input type="checkbox">), or option 
+(<option> in a <select>) element that is checked or toggled to an on state. -->
+
+
+(4) ::nth-of-type()
+
+The :nth-of-type() CSS pseudo-class matches elements of a given type (tag name), based on their position among a group
+of siblings.
+
+
+IN .CSS file
+
+.post:nth-of-type(3n){
+background-color: #ffc6ff;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+* PSEUDO ELEMENTS
+
+Keyword added to a selector that lets you style a particular part of
+selected element(s)
+
+::after
+::before
+::first-letter
+::selection
+
+
+
+(1) ::first-letter
+
+The ::first-letter CSS pseudo-element applies styles to the first letter of the first
+line of a block-level element, but only when not preceded by other content (such as images or inline tables).
+
+In .css FILE
+
+h2::first-letter{
+font-size: 50px;
+}
+
+
+
+(2) ::selection
+
+The ::selection CSS pseudo-element applies styles to the part of a document that has been
+highlighted by the user (such as clicking and dragging the mouse across text).
+
+p::selection{
+background-color: #ffba08;
+}
+
+
+(3) ::before
+
+In CSS, ::before creates a pseudo-element that is the first child of the selected element.
+It is often used to add cosmetic content to an element with the content property. It is inline by default.
+
+HTML
+
+<!-- <q>Some quotes</q>, he said, <q>are better than none.</q> -->
+
+
+CSS
+
+q::before {
+content: "«";
+color: blue;
+}
+
+
+(4) ::after
+
+In CSS, ::after creates a pseudo-element that is the last child of the selected element.
+It is often used to add cosmetic content to an element with the content property. It is inline by default.
+
+
+HTML
+
+<!-- <p class="boring-text">Here is some plain old boring text.</p>
+<p>Here is some normal text that is neither boring nor exciting.</p>
+<p class="exciting-text">Contributing to MDN is easy and fun.</p> -->
+
+
+CSS
+
+<!-- .exciting-text::after {
+content: " <- EXCITING!"; color: green; } .boring-text::after { content: " <- BORING" ; color: red; } -->
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*SPECIFICITY
+
+SPECIFICITY IS HOW BROWSER DECIDES WHICH RULES TO APPLY WHEN MULTIPLE RULES COULD APPLY TO SAME ELEMENT IT IS A
+MEASURE OF HOW SPECIFIC A GIVEN SELECTOR IS. THE MORE SPECIFIC SELECTOR WINS
+
+ID ARRTIBUTE IS MORE SPECIFIC THAN CLASS ATTRIBUTE
+
+CLASS ATTRIBUTE IS MORE SPECTIC THAN JUST THE NORMAL ELEMENT
+
+ID>CLASS>ELEMENT
+
+
+
+Priority Selector:
+
+
+Priority 1 --> ID SELECTORS
+
+Priority 2 --> CLASSES,ATTRIBUTES,PSEUDO CLASS SELECTOR
+
+Priority 3 --> ELEMENT AND PSEUDO ELEMENT SELECTOR
+
+
+
+
+
+
+
+* BOX MODEL WIDTH AND HEIGHT
+
+Everything in CSS IS A BOX
+
+
+WIDTH
+
+The width CSS property sets an element's width. By default, it sets the width of the
+content area, but if box-sizing is set to border-box, it sets the width of the border area.
+
+
+IN .CSS file
+
+div{
+width: 200px;
+}
+
+
+HEIGHT
+
+The height CSS property specifies the height of an element. By default, the property defines the
+height of the content area. If box-sizing is set to border-box, however, it instead determines the
+height of the border area.
+
+The min-height and max-height properties override height.
+
+
+IN .CSS file
+
+div{
+width: 200px;
+height: 200px;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*BORDER AND BORDER RADIUS
+
+IS IS THE BORDER AROUND ELEMENT
+
+
+BORDER WIDTH*
+
+CONTROLS THE THICKNESS OF THE BORDER
+
+
+BORDER COLOR*
+
+CONTROLS THE COLOR OF THE BORDER
+
+
+BORDER STYLE*
+
+CONTROLS LINE STYLE,DASHED,SOLID LINE ETC
+
+
+BOX-SIZING*
+
+The box-sizing CSS property sets how the total width and height of an element is calculated.
+
+IN .CSS file
+
+#one{
+background-color:#e5989b ;
+border-width: 5px;
+border-color: black;
+border-style: solid;
+/* box-sizing: border-box; */
+}
+
+
+#two{
+background-color: #b5838b ;
+border-color: #fec5bb;
+border-width: 3px;
+border-style: dashed;
+border-left-width: 8px;
+}
+
+
+
+BORDER*
+
+The border shorthand CSS property sets an element's border. It sets the values of border-width, border-style, and
+border-color.
+
+#three{
+background-color:#6d6875 ;
+border: 4px dashed black;
+border-left-style: dotted;
+}
+
+
+BORDER RADIUS*
+
+The border-radius CSS property rounds the corners of an element's outer border edge.
+You can set a single radius to make circular corners, or two radii to make elliptical corners.
+
+
+
+BOX MODEL PADDING*
+
+WHEN YOU INSPECT A CERTAIN ELEMENT IN A DEV TOOL AND SEE A GREEN COLOR SURROUNDING THAT'S PADDING
+!!!!!!!!!!!!!!!!!!!!!!!!!
+
+The padding CSS shorthand property sets the padding area on all four sides of an element at once.
+
+PADDING IS THE SPACE BETWEEN THE CONTENT BOX AND THE BORDER
+
+
+IN .CSS file
+
+h1{
+background-color: pink;
+width: 100px;
+padding-left: 100px;
+padding-top: 50px;
+}
+
+
+
+BOX MODEL MARGIN*
+
+WHEN YOU INSPECT A CERTAIN ELEMENT IN A DEV TOOL AND SEE A YELLOW COLOR SURROUNDING THAT'S MARGIN
+!!!!!!!!!!!!!!!!!!!!!!!!!
+
+The margin CSS shorthand property sets the margin area on all four sides of an element.
+
+h1{
+background-color: pink;
+width: 100px;
+padding-left: 100px;
+padding-top: 50px;
+margin: 0;
+}
+
+
+
+DISPLAY PROPERTY*
+
+
+INLINE ELEMENT: WIDTH,HEIGHT ARE IGNORED. MARGIN AND PASSING PUSH ELEMENTS AWAY HORIZONTALLY BUT NOT VERTICALLY !!!!
+
+BLOCK ELEMENT: BLOCK ELEMENTS BREAK THE FLOW OF A DOCUMENT WIDTH,HEIGHT,MARGIN AND PADDING ARE RESPECTED !!!!!
+
+INLINE-BLOCK: BEHAVED LIKE AN INFINITE ELEMENT, EXCECT WIDTH,HEIGHT,PADDING AND MARGIN ARE RESPECTED !!!!!
+
+
+
+The display CSS property sets whether an element is treated as a block or inline element and the layout used for its
+children, such as flow layout, grid or flex.
+
+Formally, the display property sets an element's inner and outer display types. The outer type sets an element's
+participation
+in flow layout; the inner type sets the layout of children. Some values of display are fully defined in their own
+individual
+specifications; for example the detail of what happens when display: flex is declared is defined in the CSS Flexible Box
+Model
+specification. See the table at the end of this document for all of the individual specifications.
+
+
+IN .CSS file
+
+h1{
+background-color: palegoldenrod;
+border: 1px solid black;
+display: inline;
+}
+
+div {
+height: 200px;
+width: 200px;
+background-color: olivedrab;
+border: 5px solid black;
+display: inline-block;
+margin: 50px;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+*CSS UNITS
+
+
+(1) PERCENTAGE*
+
+PERCENTAGE ARE ALWAYS RELATIVE TO SOME OTHER VALUE.SOMETIMES ITS A VALUE FROM A PARENT AND OTHER TIMES ITS A VALUE FROM
+THE ELEMENT ITSELF
+
+
+eg:
+width:50% - half the width of the parent
+
+line-height:50%- half the font size of element itself
+
+
+IN .HTML FILE
+
+<section>
+    <div>
+
+    </div>
+</section>
+
+
+IN .CSS FILE
+
+
+section{
+background-color: #6b705c;
+width: 800px;
+height: 800px;
+}
+
+div{
+background-color: #f72585;
+width: 50%;
+height: 50%;
+}
+
+
+h1{
+font-size: 40px;
+border:1px solid black;
+line-height: 200%;
+}
+
+HERE THE SECTION IS THE PARENT OF DIV ELEMENT AND SO USING THE PERCENTAGE
+UNIT FOR DIV SIZE
+
+
+
+(2) EM*
+
+EM'S ARE RELATIVE UNITS
+
+WITH FONT-SIZE 1 em EQUALS THE FONT-SIZE OF THE PARENT
+2 em's TWICE THE FONT SIZE OF THE PARENT ETC
+
+WITH OTHER PROPERTIES 1em is EQUAL TO THE COMPUTED FONT-SIZE OF THE
+ELEMENT ITSELF
+
+
+EVEN IF THE SIZE OF THE PARENT ELEMENT CHANGES, SIZE OF THE CHILD ELEMENTS
+CHANGES ACCORDING TO THE PARENT SIZE
+
+IN .HTML FILE
+
+<!-- <article>
+<h2>I AM H2</h2> -->
+
+
+IN .CSS FILE
+
+article{ --> ARTICLE IS THE PARENT OF H2
+font-size: 30px;
+}
+
+
+h2{
+font: size 2em;
+}
+
+SHORT COMINGS OF EM'S IS THAT THEY CAN GROW OR STACK IF IMPLEMENTED IN A LIST.
+IF LIST HAS NESTED ELEMENTS THAN THE ELEMENT NESTED FURTHER DOWN THE LIST WILL SEE
+IT'S SIZE SIGNIFICANTLY INCREASE OR DECREASE DEPENDING ON THE PARENT ELEMENT !!!!!!!!!
+
+
+
+(3) REM'S
+
+ROOT EMS
+
+THE ROOT ELEMENT IS html tag <html lang="en">
+
+</html>
+
+RELATIVE TO THE ROOT HTML ELEMENTS FONT-SIZE, OFTEN EASIER TO WORK WITH.
+
+IF THE ROOT FONT SIZE IS 20PX, 1rem is always 20px, 2rem is always 40px etc.
+
+
+IN .CSS FILE
+
+#rems h2{
+font-size: 3rem;
+}
+
+#rems h3 {
+font-size: 2rem;
+}
+
+#rems ul{
+font-size: 1rem;
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OPACITY AND ALPHA CHANNEL*
+
+
+RGBA(0 209 112 0.5)
+
+RED --> 0
+GREEN --> 209
+BLUE --> 112
+ALPHA--> 0.5
+
+ALPHA GOVERNS THE TRANSPARENCY OF THE COLOR, VALUE IS FROM 0 TO 1
+
+
+IN .CSS FILE
+
+#rgba {
+width: 50%;
+height: 50%;
+background-color:rgba(255,255,255,0.7);
+}
+
+
+
+OPACITY*
+
+The opacity CSS property sets the opacity of an element.
+Opacity is the degree to which content behind an element is
+hidden, and is the opposite of transparency.
+
+
+OPACITY GOVERNS ELEMENTS TARNSPARENCY INCLUDING ITS DECENDANTS
+
+
+IN .CSS FILE
+
+#opacity{
+width: 50%;
+height: 50%;
+background-color:yellow;
+opacity: 0.5;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*POSITION PROPERTY https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+
+The position CSS property sets how an element is positioned in a document.
+The top, right, bottom, and left properties determine the final location of
+positioned elements.
+
+
+Values*
+
+
+(1) STATIC
+
+The element is positioned according to the normal flow of the document.
+The top, right, bottom, left, and z-index properties have no effect.
+This is the default value.
+
+IN .CSS FILE
+
+#static #middle {
+position: static;
+top: 100px;
+}
+
+IN .HTML FILE
+
+<section id="static">
+    <h2>Static</h2>
+    <div></div>
+    <div id="middle"></div>
+    <div></div>
+</section>
+
+
+(2) RELATIVE
+
+The element is positioned according to the normal flow of the document, and then
+offset relative to itself based on the values of top, right, bottom, and left. The
+offset does not affect the position of any other elements; thus, the space given for
+the element in the page layout is the same as if position were static.
+
+This value creates a new stacking context when the value of z-index is not auto.
+Its effect on table-*-group, table-row, table-column, table-cell, and table-caption
+elements is undefined.
+
+
+IN .CSS FILE
+
+#relative #middle{
+position: relative;
+top: 100px;
+left: 100px;
+}
+
+
+(3) ABSOLUTE
+
+
+The element is removed from the normal document flow, and no space is
+created for the element in the page layout. It is positioned relative to
+its closest positioned ancestor, if any; otherwise, it is placed relative
+to the initial containing block. Its final position is determined by the
+values of top, right, bottom, and left.
+
+This value creates a new stacking context when the value of z-index is
+not auto. The margins of absolutely positioned boxes do not collapse with other margins.
+
+
+IN .HTML FILE
+
+<section id="absolute">
+    <h2>absolute</h2>
+    <div></div>
+    <div id="middle"></div>
+    <div></div>
+</section>
+
+
+IN .CSS FILE
+
+#absolute #middle{
+position: absolute;
+top: 50px;
+}
+
+
+THE MIDDLE BLOCK WILL MOVE 50 PX TO THE TOP RELATIVE TO THE PARENT IN THIS CASE IS "ABSOLUTE"
+
+
+
+(4) FIXED
+
+The element is removed from the normal document flow, and no space is created
+for the element in the page layout. It is positioned relative to the initial
+containing block established by the viewport, except when one of its ancestors
+has a transform, perspective, or filter property set to something other than
+none (see the CSS Transforms Spec), in which case that ancestor behaves as the
+containing block. (Note that there are browser inconsistencies with perspective
+and filter contributing to containing block formation.) Its final position is
+determined by the values of top, right, bottom, and left.
+
+This value always creates a new stacking context. In printed documents, the element
+is placed in the same position on every page.
+
+
+THE ELEMENT WILL STAY FIXED AT THE TOP EVEN IF YOU SCROLL DOWN THAT ELEMENT WILL ALWAYS APPEAR ON
+THE TOP
+
+#fixed #middle{
+position: fixed;
+top: 0px;
+left: 0px;
+}
+
+<section id="fixed">
+    <h2>fixed</h2>
+    <div></div>
+    <div id="middle"></div>
+    <div></div>
+</section>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* CSS TRANSITIONS
+
+WE CAN SPECIFY PROPERTY NAME,DURATION,TIMING FUNCTION,DELAY
+
+
+IN .HTML FILE (Constant div element remains only in CSS file change happens)
+
+<div class="circle"></div>
+
+
+IN .CSS FILE
+
+.circle{
+width: 300px;
+height: 300px;
+background-color: magenta;
+transition: 3s;
+}
+
+.circle:hover{
+background-color: cyan;
+border-radius: 50%;
+}
+
+
+(1) PROPERTY NAME TRANSITIONS*
+
+
+IN .CSS FILE
+
+.circle{
+width: 300px;
+height: 300px;
+background-color: magenta;
+transition: background-color 3s;
+}
+
+.circle:hover{
+background-color: cyan;
+border-radius: 50%;
+}
+
+(2) DELAY*
+
+WE CAN DELAY THE TARNSITION
+
+IN .CSS FILE
+
+.circle{
+width: 300px;
+height: 300px;
+background-color: magenta;
+transition: background-color 3s 1s;
+}
+
+
+INSTEAD OF BACKCGROUND-COLOR, WE CAN ALSO TYPE "all"
+
+
+.circle:hover{
+background-color: cyan;
+border-radius: 50%;
+}
+
+
+(3) TIMING FUNCTION* https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+
+The transition-timing-function CSS property sets how intermediate values are calculated for
+CSS properties being affected by a transition effect.
+
+
+IN .CSS FILE
+
+div:nth-of-type(1){
+transition-timing-function: ease-in;
+}
+
+div:nth-of-type(2){
+transition-timing-function: ease-out;
+}
+
+div:nth-of-type(3){
+transition-timing-function: cubic-bezier(0.7,0,0.84,0);
+}
+
+div:nth-of-type(4){
+transition-timing-function: cubic-bezier(0.85,0,0.15,1);
+}
+
+
+
+* CSS TRANSFORM
+
+
+MARGIN: AUTO TO CENTRE THE BLOCK
+
+
+(1) ROTATE*
+
+The rotate CSS property allows you to specify rotation transforms
+individually and independently of the transform property. This maps
+better to typical user interface usage, and saves having to remember
+the exact order of transform functions to specify in the transform property.
+
+
+TRANSFORM ORIGIN**-->The transform-origin CSS property sets the origin for an element's
+transformations.
+
+
+(2) SCALE*
+
+The scale() CSS function defines a transformation that resizes an element on the 2D plane. Because the amount of scaling
+is defined by a vector, it can resize the horizontal and vertical dimensions at different scales. Its result is a
+<!-- <transform-function> data type. -->
+
+IN .CSS FILE
+
+section:first-of-type h1:nth-of-type(2){
+transform:scale(0.5);
+}
+
+
+
+(3)TRANSLATE*
+
+The translate() CSS function repositions an element in the horizontal
+<!-- and/or vertical directions. Its result is a <transform-function> data type. -->
+
+IN .CSS FILE
+
+section:first-of-type h1:nth-of-type(3){
+transform:translateX(200px);
+}
+
+section:first-of-type h1:nth-of-type(4){
+transform:translate(-200px,50px);
+}
+
+
+(4) *SKEW
+
+The skew() CSS function defines a transformation that skews an element on the 2D plane.
+<!-- Its result is a <transform-function> data type. -->
+
+section:nth-of-type(2) h1:nth-of-type(1){
+transform: skew(10deg);
+}
+
+
+
+*BOX SHADOW https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by
+commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.
+
+The box-shadow property enables you to cast a drop shadow from the frame of almost any element. If a border-radius
+is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of
+multiple box shadows is the same as multiple text shadows (the first specified shadow is on top).
+
+
+
+* VIEWPORT WIDTH(vw) & VIEWPORT HEIGHT(vh)
+
+VIEWPORT WIDTH AND VIEWPORT HEIGHT ARE KIND OF LIKE PERCENTAGE UNIT
+
+HOWEVER UNLIKE PERCENTAGE WHO DEPEND ON THEIR PARENTS SIZE,"vh" and "vw" depend on the screen size.
+
+For example,
+
+50vh means that element will have 50 percent the size of that screen (mobile,tablet,laptop,desktop etc)
+
+1vh = 1 % of the height of the screen *******
+1vw = 1% of the width of the screen **********
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* BACKGROUD IMAGE
+
+
+The background-image CSS property sets one or more background images on an element.
+
+The background images are drawn on stacking context layers on top of each other.
+The first layer specified is drawn as if it is closest to the user.
+
+The borders of the element are then drawn on top of them, and the background-color
+is drawn beneath them. How the images are drawn relative to the box and its
+borders is defined by the background-clip and background-origin CSS properties.
+
+If a specified image cannot be drawn (for example, when the file denoted by the
+specified URI cannot be loaded), browsers handle it as they would a none value.
+
+
+
+
+*BACKGROUND SIZE
+
+The background-size CSS property sets the size of the element's background image.
+The image can be left to its natural size, stretched, or constrained to fit the available space.
+
+
+Values
+
+contain***
+
+Scales the image as large as possible within its container without cropping or
+stretching the image. If the container is larger than the image, this will result
+in image tiling, unless the background-repeat property is set to no-repeat.
+
+cover***
+Scales the image as large as possible to fill the container, stretching
+the image if necessary. If the proportions of the image differ from the
+element, it is cropped either vertically or horizontally so that no empty
+space remains.
+
+auto***
+Scales the background image in the corresponding direction such that its
+intrinsic proportions are maintained.
+
+<!-- <length>*** -->
+Stretches the image in the corresponding dimension to the specified length. Negative values are not allowed.
+
+<!-- <percentage>*** -->
+Stretches the image in the corresponding dimension to the specified percentage
+of the background positioning area. The background positioning area is determined
+by the value of background-origin (by default, the padding box). However, if the
+background's background-attachment value is fixed, the positioning area is instead
+the entire viewport. Negative values are not allowed.
+
+
+
+
+*BACKGROUND POSITION
+
+
+The background-position CSS property sets the initial position for each
+background image. The position is relative to the position layer set by
+background-origin.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* CSS FLEXBOX
+
+BY DEFAULT FLEXBOX IS ALLOWED TO SHRINK ELEMENT TO FIT A CONTAINER
+
+WORKS ONLY IF A CONTAINER HAS CHILD ELEMENTS IN IT
+
+THE PARENT IS CALLED AS A FLEX CONTAINER AND ITS CHILD ELEMENTS ARE CALLED
+FLEX ITEMS
+
+FLEXBOX IS ONE DIMENSIONAL LAYOUT METHOD FOR LAYING OUT ITEMS IN ROWS
+OR COLUMNS
+
+FLEXBOX ALLOWS US TO DISTRIBUTE SPACE DYNAMICALLY ACROSS ELEMENTS
+OF ANA UNKNOWN SIZE,HENCE TERN FLEX
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ALIGN-SELF ***
+
+The align-self CSS property overrides a grid or flex item's align-items
+value. In Grid, it aligns the item inside the grid area. In Flexbox,
+it aligns the item on the cross axis.
+
+The property doesn't apply to block-level boxes, or to table cells.
+If a flexbox item's cross-axis margin is auto, then align-self is ignored.
+
+IN .CSS FILE
+
+.el--1 {
+align-self: flex-start;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ORDER ***
+
+The order CSS property sets the order to lay out an item in a
+flex or grid container. Items in a container are sorted by ascending
+order value and then by their source code order.
+
+IN .CSS file
+
+.el--6 {
+order: -1;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GAP ***
+
+The gap CSS property sets the gaps (gutters) between rows and columns.
+It is a shorthand for row-gap and column-gap.
+
+TO CREATE SPACE BETWEEN MARGINS WITHOUT USING MARGIN
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+(1) FLEX BASIS
+
+USED TO SIZE FLEX ITEMS, WE DO NOT USE THE WIDTH PROPERTY BUT USE FLEX BASIS
+
+The flex-basis CSS property sets the initial main size of a flex item.
+It sets the size of the content box unless otherwise set with box-sizing.
+
+
+(2) FLEX SHRINK ***
+
+The flex-shrink CSS property sets the flex shrink factor of a flex item.
+If the size of all flex items is larger than the flex container, items
+shrink to fit according to flex-shrink.
+
+USED TO DETERMINE WHETHER FLEXBOX IS ALLOWED TO SHRINK ELEMENT IF NECESSARY
+
+In use, flex-shrink is used alongside the other flex properties flex-grow
+and flex-basis, and normally defined using the flex shorthand.
+
+
+(3) FLEX GROW ***
+
+The flex-grow CSS property sets the flex grow factor of a flex item's
+main size.
+
+REMAINING SPACE IN THE CONTAINER IS EVENLY DIVIDED BETWEEN REMAINING ELEMENTS
+
+IF FLEX GROW SET ON ONE ITEM IN THE CONTAINER, THAT ITEM IS ONLY ALLOWED TO FILL THE REMAINING
+SPACE OF THE CONTAINER
+
+if an item1 inside container has flex-grow 1 and item2 has flex-grow 2,
+the item2 will occupy double the remaing remaining space of the container
+than item1.
+
+(4) FLEX PROPERTY***
+
+This property is a shorthand for the following CSS properties:
+
+flex-grow
+flex-shrink
+flex-basis
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Justify Content*** https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+
+The CSS justify-content property defines how the browser distributes
+space between and around content items along the main-axis of a flex
+container, and the inline axis of a grid container.
+
+The interactive example below demonstrates some of the values using
+Grid Layout.
+
+HELPS UNDERSTAND HOW CONTENT IS DISTRIBUTED ACROSS MAIN AXIS
+
+eg:
+justify-content: flex-start
+justify-content: flex-end
+justify-content: center
+justify-content: space-between
+justify-content: space-around
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOR FLEX DIRECTION:ROW;***
+--> MAIN AXIS IS X AXIS CONTENT GOES FROM LEFT TO RIGHT
+--> CROSS AXIS IS Y AXIS CONTENT GOES FROM TOP TO BOTTOM
+
+FOR FLEX DIRECTION:COLUMN;
+--> MAIN AXIS IS Y AXIS CONTENT GOES FROM TOP TO BOTTOM
+--> CROSS AXIS IS X AXIS CONTENT GOES FROM LEFT TO RIGHT
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FLEX WRAP***** https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+
+The flex-wrap CSS property sets whether flex items are forced onto one line or
+can wrap onto multiple lines. If wrapping is allowed, it sets the direction
+that lines are stacked.
+
+eg,
+flex-wrap: wrap;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ALIGN ITEMS**** https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+
+The CSS align-items property sets the align-self value on all direct children
+as a group. In Flexbox, it controls the alignment of items on the Cross Axis.
+In Grid Layout, it controls the alignment of items on the Block Axis within
+their grid area.
+
+The interactive example below demonstrates some of the values for align-items
+using grid layout.
+
+eg,
+align-items: flex-start;
+align-items: center;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* MEDIA QUERIES https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+
+The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries. With
+it, you
+specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on
+which the
+content is being used.
+
+IN .CSS FILE
+
+@media (width:800px){
+h1{
+color: purple;
+}
+}
+
+
+@media (min-width:800px){ ---> min width 800px and above color purple
+h1{
+color: purple;
+}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* CSS GRID
+
+The grid CSS property is a shorthand property that sets all of the explicit
+and implicit grid properties in a single declaration.
+
+Using grid you specify one axis using grid-template-rows or
+grid-template-columns, you then specify how content should auto-repeat
+in the other axis using the implicit grid properties: grid-auto-rows,
+grid-auto-columns, and grid-auto-flow.
+
+
+Grid-template-columns***
+
+The grid-template-columns CSS property defines the line names and
+track sizing functions of the grid columns.
+
+
+Grid-template-rows***
+
+The grid-template-rows CSS property defines the line names and track sizing
+functions of the grid rows.
+
+
+Column-gap (grid-column-gap)***
+
+The column-gap CSS property sets the size of the gap (gutter) between an
+element's columns.
+
+
+Row-gap (grid-row-gap)
+
+The row-gap CSS property sets the size of the gap (gutter) between an
+element's grid rows.
+
+Grid-template-rows: 1fr auto;
+
+Auto means that the grid item will take the space it needs and no more than that.
+
+
+ON GRID CONATINERS**
+
+{
+display: grid;
+/* grid-template-columns: 1fr 1fr 1fr auto; */
+/* grid-template-rows: 300px 200px; */
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 1fr 1fr;
+/* height: 500px; */
+/* gap: 30px; */
+column-gap: 20px;
+row-gap: 40px;
+}
+
+
+ON GRID ITEMS**
+
+.el--8 {
+grid-column: 2/3; ---> START/END(2/3) OF COLUMN (START AT LINE 1 END AT LINE 3)
+grid-row: 1/2; ---> START/END(1/2) OF ROW (START AT LINE 1 END AT LINE 2)
+}
+
+
+ALIGNING GRID ITEMS AND TRACKS **
+
+ALIGNING TRACKS---
+justify-content: center;
+/* justify-content: space-between; */
+
+align-content: center;
+
+
+ALIGNING ITEMS INSIDE CELLS
+
+align-items: end;
+justify-items: end;
+}
+
+.el--3 {
+align-self: center;
+justify-self: center;
+}

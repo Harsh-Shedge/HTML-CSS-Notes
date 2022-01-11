@@ -1,0 +1,693 @@
+USE SHIFT + ALT + F TO FORMAT THE CODE NICELY
+
+*BOLD
+<!-- * <b> 'Anything btw this bold tag is bolded, the tage starts as <b>
+and ends at </b>'
+</b>
+
+
+* <p> --> Adds line break
+
+
+<!-- <p> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text
+        separated from adjacent blocks
+        by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related
+        content,
+        such as images or form fields.
+        Paragraphs are block-level elements, and notably will automatically close if another block-level element is
+        parsed before the closing </p> -->
+
+
+
+* HEADINGS
+
+<!-- h1 should be used for the top level main heading, one at most
+
+<h1>Heading level 1</h1> Size of the text btw heading is in decreasing order
+<h2>Heading level 2</h2> Depends if you use h1 or h2 or h3 or h4 or h5 or h6
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6> -->
+
+*DOCTYPE
+<!-- <!DOCTYPE html> # Does not have a closing tag, just says that we are using HTML 5
+
+* The <html> HTML element represents the root (top-level element) of an HTML document,
+so it is also referred to as the root element. All other elements must be descendants of this element.
+Permitted content -->
+<!-- ONE  <head> element (contains things that dont show up on page) -->
+<!-- followed by one --> -->
+<!-- <body> element. -->
+
+
+*
+<!-- The <head> HTML element contains machine-readable information (metadata) about the document, like its title,scripts, and style sheets. -->
+--> -->
+
+*TITLE
+<!-- The <title> (WORDS WE SEE ON TABS,NOT THE ACTUAL TITLE OF PAGE) HTML element defines the document's 
+title that is shown in a browser's title bar or a page's tab. 
+It only contains text; tags within the element are ignored. -->
+<!-- (DOES NOT SHOW UP ANYWHERE IN PAGE ONLY IN BROWSER) -->
+
+*
+<!-- The <body> HTML element represents the contents of an HTML document. There can be only one <body> element in a document. -->
+
+
+* LIST ELEMENTS
+
+<!-- The <ol> HTML element represents an ordered list of items — typically rendered as a numbered list. -->
+<!-- Permitted content for <ol></ol> --- > 	Zero or more <li>, <script> and <template> elements. -->
+
+<!-- The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list. -->
+<!-- Permitted content for <ul></ul> --- > 	Zero or more <li>, <script> and <template> elements. -->
+
+
+<!-- The <li> (list items) HTML element is used to represent an item in a list. It must be contained in a parent 
+element: an ordered list (ol), an unordered list (ul), or a menu (menu). In menus and 
+unordered lists, list items are usually displayed using bullet points. In ordered lists, 
+they are usually displayed with an ascending counter on the left, such as a number or letter. -->
+<!-- <li></li> represents a single item in a list -->
+
+WE CAN ALSO CREATE NESTED LISTS
+
+* THE ANCHOR ELEMENT
+<!-- <a>: THE ANCHOR ELEMENT -->
+
+<!-- The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, 
+locations in the same page, or anything else a URL can address.
+
+Content within each <a> should indicate the link's destination. If the href attribute 
+is present, pressing the enter key while focused on the <a> element will activate it. -->
+
+EXAMPLE
+
+<!-- <p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul> -->
+
+IN ORDER TO TELL HTML THAT WE WANT THE LINK INSIDE THE ANCHOR TAG TO OPEN A Website
+WE TYPE 'http://www' BEFORE THE ACTUAL LINK
+EXAMPLE : http://www.google.com
+
+We can also link to other html document that we have created!!
+FOR EXAMPLE IF WE CREATE A ABOUT.HTML FILE, WE CAN TYPE IN THE
+ANCHOR TAG AS "ABOUT.HTML"
+
+<!-- <a href="chickens.html">Go to chickens</a>
+<a href="http://www.google.com">I am a link to google</a>
+<a href="about.html">About page</a> -->
+
+
+* THE IMAGE EMBEDDED ELEMENT
+<!-- <img> 
+The <img> HTML element embeds an image into the document.
+
+<img class="fit-picture"
+src="/media/cc0-images/grapefruit-slice-332-332.jpg"
+alt="Grapefruit slice atop a pile of other slices"> -->
+
+<!-- The src(SOURCE) attribute is required, and contains the path to the image you want to embed.
+
+The alt attribute holds a text description of the image, which isn't mandatory but is 
+incredibly useful for accessibility — screen readers read this description out to their 
+users so they know what the image means. Alt text is also displayed on the page if the 
+image can't be loaded for some reason: for example, network errors, content blocking, 
+or linkrot. -->
+
+YOU CAN USE HTML TO ADJUST SIZE OF PHOTO USING 'width' element followed by the
+'size' and 'px'--> pixels, HOWEVER IT IS A BAD PRACTISE, USE CSS INSTEAD
+
+
+* INLINE ELEMENTS
+
+Inline elements fit in alongside other elements, example : anchor tags,span,time
+
+* BLOCK ELEMENTS
+
+Block level elements take up a whole 'block' of space,example : paragraphs,div
+
+
+
+* THE CONTENT DIVISION ELEMENT
+<!-- <div> -->
+
+<!-- The <div> HTML element is the generic container for flow content. 
+It has no effect on the content or layout until styled in some way 
+using CSS (e.g. styling is directly applied to it, or some kind of 
+layout model like Flexbox is applied to its parent element). -->
+
+
+<!-- Permitted content	Flow content.
+Or (in WHATWG HTML): If the parent is a <dl> element: 
+one or more <dt> elements followed by one or more <dd> 
+elements, optionally intermixed with <script> and 
+<template> elements. -->
+
+
+* THE CONTENT SPAN ELEMENT
+
+<!-- <span>: The Content Span element -->
+
+<!-- The <span> HTML element is a generic inline container for phrasing 
+content, which does not inherently represent anything. It can be 
+used to group elements for styling purposes (using the class or id 
+attributes), or because they share attribute values, such as lang. 
+It should be used only when no other semantic element is appropriate. 
+<span> is very much like a <div> element, but <div> is a block-level 
+element whereas a <span> is an inline element. -->
+
+Permitted content Phrasing content.
+
+
+* HORIZONTAL RULE ELEMENT
+
+<!-- <hr>: The Thematic Break (Horizontal Rule) element -->
+
+<!-- The <hr> HTML element represents a thematic break between paragraph-level elements: 
+for example, a change of scene in a story, or a shift of topic within a section. -->
+
+
+*LINE BREAK ELEMENT
+
+<!-- The <br> HTML element produces a line break in text (carriage-return). 
+It is useful for writing a poem or an address, where the division of lines is significant. -->
+
+<!-- Note: Do not use <br> to create margins between paragraphs; wrap them in <p> 
+elements and use the CSS margin property to control their size. -->
+
+
+* THE SUPER SCRIPT ELEMENT
+
+<!-- The <sup> HTML element specifies inline text which is to be displayed as 
+superscript for solely typographical reasons. Superscripts are usually 
+rendered with a raised baseline using smaller text. -->
+
+Permitted content Phrasing content.
+
+
+* THE SUBSCRIPT ELEMENT
+
+<!-- The <sub> HTML element specifies inline text which should be displayed as 
+subscript for solely typographical reasons. Subscripts are typically 
+rendered with a lowered baseline using smaller text. -->
+
+Permitted content Phrasing content.
+
+
+* HTML ENTITIES
+
+Starts with an amperstand(&) and ends with a semicolon(;) with a specific txt in btw to display that character/symbol
+
+Used to display reserved characters that normally would be invalid
+
+Also used in place of difficult to type characters
+
+The browser intreprets them and renders the correct character instead.
+
+
+* INTRO TO SEMANTIC MARKUP
+
+Semantic - relating to meaning
+
+INSTEAD OF DIVS USE MORE SPECIFIC ELEMENTS LIKE
+
+<!-- <section> -->
+<!-- <article> -->
+<!-- <nav> -->
+<!-- <main> -->
+<!-- <header> -->
+<!-- <footer> -->
+<!-- <assign> -->
+<!-- <summary> -->
+<!-- <details> -->
+
+
+<!-- (1)  <main> -->
+
+<!-- The <main> HTML element represents the dominant content of the <body> of 
+a document. The main content area consists of content that is directly 
+related to or expands upon the central topic of a document, or the 
+central functionality of an application. -->
+
+Permitted content Flow content.
+
+<!-- The content of a <main> element should be unique to the document. Content that is repeated across a set of documents or
+document sections such as sidebars, navigation links, copyright information, site logos, and search forms shouldn't be
+included unless the search form is the main function of the page. -->
+
+USAGE NOTES
+<!-- <main> doesn't contribute to the document's outline; that is, unlike elements such as
+<body>, headings such as <h2>, and such, <main> doesn't affect the DOM's concept of the structure of the page. It's
+strictly informative. -->
+
+
+* THE NAVIGATION SECTION ELEMENT
+<!-- <nav>: The Navigation Section element -->
+
+<!-- The <nav> HTML element represents a section of a page whose purpose is to 
+provide navigation links, either within the current document or to other 
+documents. Common examples of navigation sections are menus, tables of 
+contents, and indexes. -->
+
+Permitted content Flow content.
+
+<!-- Flow content is a broad category that encompasses most elements that can go inside the <body> element, 
+including heading elements, sectioning elements, phrasing elements, embedding elements, interactive elements, 
+and form-related elements. It also includes text nodes (but not those that only consist of white space characters). -->
+
+<!-- The flow elements are: <a>, <abbr>, <address>, <article>, <aside>, <audio>, <b>,<bdo>, <bdi>, <blockquote>, 
+<br>, <button>, <canvas>, <cite>, <code>, <command>, <data>, <datalist>, <del>, <details>, <dfn>, <div>, <dl>, 
+<em>, <embed>, <fieldset>, <figure>, <footer>, <form>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <header>, <hgroup>, 
+<hr>, <i>, <iframe>, <img>, <input>, <ins>, <kbd>, <keygen>, <label>, <main>, <map>, <mark>, <math>, <menu>, 
+<meter>, <nav>, <noscript>, <object>, <ol>, <output>, <p>, <picture>, <pre>, <progress>, <q>, <ruby>, <s>, 
+<samp>, <script>, <section>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <svg>, <table>, <template>, 
+<textarea>, <time>, <u>, <ul>, <var>, <video>, and <wbr>.
+  
+A few other elements belong to this category, but only if a specific condition is fulfilled:
+  
+<area>, if it is a descendant of a <map> element
+<link>, if the itemprop attribute is present
+<meta>, if the itemprop attribute is present
+<style>, if the scoped attribute is present -->
+
+
+* THE GENERIC SECTION ELEMENT
+<!-- <section>: The Generic Section element -->
+
+<!-- The <section> HTML element represents a generic standalone section 
+of a document, which doesn't have a more specific semantic element 
+to represent it. Sections should always have a heading, with very 
+few exceptions. -->
+
+
+* THE ARTICLE CONTENTS ELEMENT
+
+<!-- The <article> HTML element represents a self-contained composition in a document, 
+page, application, or site, which is intended to be independently distributable or 
+reusable (e.g., in syndication). Examples include: a forum post, a magazine or 
+newspaper article, or a blog entry, a product card, a user-submitted comment, 
+an interactive widget or gadget, or any other independent item of content. -->
+
+Permitted content Flow content.
+
+Usage NOTES
+
+<!-- Each <article> should be identified, typically by including a heading (<h1>-<h6> element) as a child of the <article> element.
+When an <article> element is nested, the inner element represents an article related to the outer element. For example, the comments of a 
+blog post can be <article> elements nested in the <article> representing the blog post.
+Author information of an <article> element can be provided through the <address> element, but it doesn't apply to nested <article> elements.
+he publication date and time of an <article> element can be described using the datetime attribute of a <time> element.
+Note that the pubdate attribute of <time> is no longer a part of the W3C HTML5 standard. -->
+
+
+*THE ASIDE ELEMENT
+
+<!-- The <aside> HTML element represents a portion of a document whose content is only indirectly 
+related to the document's main content. Asides are frequently presented as sidebars or call-out boxes. -->
+
+Permitted content Flow content.
+
+
+*HEADER
+<!-- <header> -->
+
+<!-- The <header> HTML element represents introductory content, typically a group of introductory or 
+navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+-->
+
+<!-- Permitted content	Flow content, but with no <header> or <footer> descendant. -->
+
+
+* FOOTER
+
+<!-- The <footer> HTML element represents a footer for its nearest sectioning content 
+or sectioning root element. A <footer> typically contains information about the 
+author of the section, copyright data or links to related documents. -->
+
+
+* DATE TIME ELEMENT
+
+<!-- The <time> HTML element represents a specific period in time. It may include 
+the datetime attribute to translate dates into machine-readable format, allowing 
+for better search engine results or custom features such as reminders. -->
+
+
+<!-- <p>The Cure will be celebrating their 40th anniversary on 
+<time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p> -->
+
+
+* THE FIGURE WITH OPTIONAL CAPTION
+
+<!-- The <figure> HTML element represents self-contained content, potentially with an 
+optional caption, which is specified using the <figcaption> element. The figure, its 
+caption, and its contents are referenced as a single unit. -->
+
+<!-- Permitted content	A <figcaption> element, followed by flow content; 
+or flow content followed by a <figcaption> element; or flow content. -->
+
+USAGE NOTES
+
+<!-- Usually a <figure> is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, 
+but that can be moved to another part of the document or to an appendix without affecting the main flow.
+
+Being a sectioning root, the outline of the content of the <figure> element is excluded from the main outline of the document.
+
+A caption can be associated with the <figure> element by inserting a <figcaption> inside it (as the first or 
+the last child). The first <figcaption> element found in the figure is presented as the figure's caption. -->
+
+
+
+* HTML TABLES
+
+<!-- Tables are structured set of data,made of rows and columns.They can be
+a great way of displaying data clearly  -->
+
+<!-- <table>, <td>,<tr>,<th>,<thead>,<tbody>,<tfoot>,<coolgroup>,<caption> -->
+
+
+* THE TABLE ELEMENT
+
+<!-- The <table> HTML element represents tabular data — that is, information 
+presented in a two-dimensional table comprised of rows and columns of cells containing data. -->
+
+<!-- Permitted content	In this order:
+
+an optional <caption> element,
+
+zero or more <colgroup> elements,
+
+an optional <thead> element,
+
+either one of the following:
+
+zero or more <tbody> elements
+
+one or more <tr> elements
+
+an optional <tfoot> element -->
+
+
+* TABLE DATA CELL ELEMENT
+
+<!-- The <td> HTML element defines a cell of a table that contains data. It participates in the 
+table model. -->
+
+
+* TABLE ROW ELEMENT
+
+<!-- The <tr> HTML element defines a row of cells in a table. The row's cells can 
+then be established using a mix of <td> (data cell) and <th> (header cell) elements. -->
+
+* TABLE HEADER ELEMENT
+
+<!-- The <th> HTML element defines a cell as header of a group of table cells. The 
+exact nature of this group is defined by the scope and headers attributes. -->
+
+Permitted content Flow content, but with no header, footer, sectioning content, or heading content descendants.
+
+
+* TABLE HEAD ELEMENT
+
+<!-- The <thead> HTML element defines a set of rows defining the head of the columns of the table. -->
+
+<!-- Permitted content	Zero or more <tr> elements. -->
+
+
+* TABLE BODY ELEMENT
+
+<!-- The <tbody> HTML element encapsulates a set of table rows (<tr> elements), indicating that they comprise the body of the table (<table>). -->
+
+<!-- Permitted content	Zero or more <tr> elements. -->
+
+
+* FORM ELEMENT
+
+<!-- The <form> element itself is a shell or a container that itself doesn't have any visual impact -->
+<!-- We then fill the form with collection of inputs, check boxes,buttons etc -->
+
+<!-- Form element "represents document section containing interactive controls for submitting information -->
+
+<!-- <form action=""></form> --> (Example)
+
+<!-- Action attribute specifies WHERE the form data should be sent -->
+<!-- The method attribute specifies which http method should be used-->
+
+
+* WHAT GOES INSIDE FORM ELEMENT
+
+<!-- (1) <input> -->
+
+Used to create variety of different form controls
+
+20+ possible types of inputs ranging from date pickers to check boxes.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input (Input Types link)
+
+Type attribute is where the magic happens.Chnaging type dramatically alters
+inputs behaviour and appereance.
+
+Place holder is an attribute that will specify the space holder text for an input
+which is the text that text that shows up before we type anything
+
+<!-- <input type="text" placeholder="username"> --> Example
+
+
+* INPUT LABEL ELEMENT
+
+<!-- The <label> HTML element represents a caption for an item in a user interface. -->
+
+
+<!-- Associating a <label> with an <input> element offers some major advantages:
+
+The label text is not only visually associated with its corresponding text input; it is programmatically associated
+with it too. This means that, for example, a screen reader will read out the label when the user is focused on the
+form input, making it easier for an assistive technology user to understand what data should be entered.
+
+
+When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event
+is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying
+to activate it — including those using a touch-screen device.
+To associate the <label> with an <input> element, you need to give the <input> an id attribute. The <label> then needs
+a for attribute whose value is the same as the input's id.
+
+
+Alternatively, you can nest the <input> directly inside the <label>, in which case the for and id attributes are
+not needed because the association is implicit: -->
+
+ATTRIBUTES FOR LABEL AND INPUT
+
+<!-- Attributes
+This element includes the global attributes.
+
+for attribute
+
+The value of the for attribute must be a single id for a labelable form-related element in the same document as the <label> element. 
+So, any given label element can be associated with only one form control.
+
+The first element in the document with an id attribute matching the value of the for attribute is the labeled 
+control for this label element — if the element with that id is actually a labelable element. If it is not a 
+labelable element, then the for attribute has no effect. If there are other elements that also match the id value, 
+later in the document, they are not considered.
+
+Multiple label elements can be given the same value for their for attribute; doing so causes the associated form control 
+(the form control that for value references) to have multiple labels. -->
+
+EXAMPLE
+<!-- <label for="username">Enter user name</label>
+
+<input id="username" type="text" placeholder="username"> -->
+
+
+* BUTTON ELEMENT
+
+<!-- The <button> HTML element represents a clickable button, used to submit forms or anywhere in a document for accessible, standard button functionality.
+
+By default, HTML buttons are presented in a style resembling the platform the user agent runs on, but you can change buttons’ appearance with CSS. -->
+
+Permitted content Phrasing content but there must be no Interactive content
+
+If button inside the form element, default behaviour is to submit the form
+
+If you want a button inside form to not submit change its type to BUTTON, the default type is SUBMIT
+<!-- <button type="button">Please do not submit</button> -->
+
+<!-- YOU CAN ALSO USE <input type="Submit" value="Click Me">  --> NOT RECOMMENDED
+
+NAME attribute IS IMPORTANT FOR EVERY INPUT USED!!
+
+https://www.google.com/search?q=pizza
+<!--the name attribute point towards the search name can be, different for different servers here is 'q' search term-->
+
+<!-- <form action="https://www.reddit.com/search">
+  <input type="text" name="q">
+  <button>Search Reddit</button>
+</form> -->
+
+EVEN IF YOU DONT HAVE A BUTTON FOR A FORM AND JUST THE INPUT, FORM WILL STILL BE SUBMITTED
+
+
+<!-- <input type="checkbox"> --> checkbox attribute
+
+<!-- <input> elements of type checkbox are rendered by default as boxes that are checked 
+(ticked) when activated, like you might see in an official government paper form. The exact 
+appearance depends upon the operating system configuration under which the browser is running. 
+Generally this is a square but it may have rounded corners. A checkbox allows you to select single 
+values for submission in a form (or not). -->
+
+
+<!-- <input type="radio"> --> radio attribute
+
+<!-- <input> elements of type radio are generally used in radio groups—collections of radio buttons describing a set of related options.
+
+Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, 
+which are filled or highlighted when selected. -->
+
+Defining a radio group
+A radio group is defined by giving each of radio buttons in the group the same name. Once a radio group is established,
+selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+
+You can have as many radio groups on a page as you like, as long as each has its own unique name.
+
+EXAMPLE
+
+<!-- <label for="xs">XS</label>
+<input type="radio" name="size" id="xs" value="xs">
+<label for="s">S</label>
+<input type="radio" name="size" id="s" value="s">
+<label for="l">L</label>
+<input type="radio" name="size" id="l" value="l"> -->
+
+INORDER TO KNOW WHICH RADIO WAS SELECTED WE ADD THE VALUE ATTRIBUTE INSIDE THE INPUT TAG
+
+file:///C:/birds?size=s
+
+
+
+* HTML SELECT ELEMENT
+
+<!-- The <select> HTML element represents a control that provides a menu of options: -->
+
+EXAMPLE
+<!-- <label for="pet-select">Choose a pet:</label>
+
+  <select name="pets" id="pet-select">
+      <option value="">--Please choose an option--</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+  </select> -->
+
+
+<!-- The above example shows typical <select> usage. It is given an id attribute to enable it to be associated with a <label> for accessibility 
+purposes, as well as a name attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by 
+an <option> element nested inside the <select>.
+
+Each <option> element should have a value attribute containing the data value to submit to the server when that option is selected. 
+If no value attribute is included, the value defaults to the text contained inside the element. You can include a selected attribute 
+on an <option> element to make it selected by default when the page first loads.
+    
+The <select> element has some unique attributes you can use to control it, such as multiple to specify whether multiple options can 
+be selected, and size to specify how many options should be shown at once. It also accepts most of the general form input attributes 
+such as required, disabled, autofocus, etc. -->
+
+
+* HTML OPTION ELEMENT
+
+<!-- The <option> HTML element is used to define an item contained in a <select>, an <optgroup>, 
+or a <datalist> element. As such, <option> can represent menu items in popups and other lists of 
+items in an HTML document. -->
+
+<!-- Permitted content	Text, possibly with escaped characters (like &eacute;). -->
+
+Value Attribute
+The content of this attribute represents the value to be submitted with the form, should this
+option be selected. If this attribute is omitted, the value is taken from the text content of the option element.
+<!-- 
+<option value="veg">Veg</option>
+<option value="steak">Steak</option> -->
+
+Selected attribute
+
+<!-- If present, this Boolean attribute indicates that the option is initially selected. 
+If the <option> element is the descendant of a <select> element whose multiple attribute is not 
+set, only one single <option> of this <select> element may have the selected attribute. -->
+
+<!-- <option value="veg" selected>Veg</option> -->
+
+
+
+* RANGE ATTRIBUTE FOR INPUT
+
+<!-- <input> elements of type range let the user specify a numeric value which must be no less than 
+a given value, and no more than another given value. The precise value, however, is not considered 
+important. This is typically represented using a slider or dial control rather than a text entry box like the number input type. -->
+
+Validation
+There is no pattern validation available; however, the following forms of automatic validation are performed:
+
+If the value is set to something which can't be converted into a valid floating-point number, validation fails because
+the input is suffering from a bad input.
+The value won't be less than min. The default is 0.
+The value won't be greater than max. The default is 100.
+The value will be a multiple of step. The default is 1.
+
+Value
+
+The value attribute contains a DOMString which contains a string representation of
+the selected number. The value is never an empty string (""). The default value is halfway
+between the specified minimum and maximum—unless the maximum is actually less than the minimum,
+in which case the default is set to the value of the min attribute.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range FOR MORE ATTRIBUTES IN RANGE
+
+<!-- <label for="cheese">Cheese amount</label> -->
+<!-- <input type="range" name="cheese lvl" value="5" id="cheese" min="1" max="10"> -->
+
+
+
+* TEXT AREA ELEMENT
+
+<!-- The <textarea> HTML element represents a multi-line plain-text editing control, 
+useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form. -->
+
+
+<!-- <label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story"
+          rows="5" cols="33">
+It was a dark and stormy night...
+</textarea> -->
+
+
+<!-- An id attribute to allow the <textarea> to be associated with a <label> element for accessibility purposes
+
+A name attribute to set the name of the associated data point submitted to the server when the form is submitted.
+
+rows and cols attributes to allow you to specify an exact size for the <textarea> to take. Setting these is a good idea for consistency, as browser defaults can differ.
+
+Default content entered between the opening and closing tags. <textarea> does not support the value attribute.
+
+The <textarea> element also accepts several attributes common to form <input>s, such as autocomplete, autofocus, disabled, placeholder, readonly, and required. -->
+
+
+* HTML ATTRIBUTE REQUIRED
+
+<!-- The Boolean required attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+
+The required attribute is supported by text, search, url, tel, email, password, date, month, week, time, datetime-local, number, checkbox, 
+radio, file, <input> types along with the <select> and <textarea> form control elements. If present on any of these input types and elements, 
+the :required pseudo class will match. If the attribute is not included, the :optional pseudo class will match. -->
+
+
+* HTML PATTERNS
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern
