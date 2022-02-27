@@ -19,3 +19,6 @@ html{
     /* Percentage of user's browser font size */
     font-size: 62.5%;
 }
+
+Use "object-fit" property for sizing images properly
+
